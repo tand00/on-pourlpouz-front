@@ -7,9 +7,9 @@ export default function LoginScreen(props) {
             <h1>On Pourlpouz</h1>
             <h2>Le jeu où Alice est très forte</h2>
             <input placeholder="Partie à rejoindre" onChange={ nameChanged }></input>
-            <button>Créer une partie</button>
-            <button>Rejoindre la partie</button>
-            <button>Observer la partie</button>
+            <button onClick={ props.createRoom }>Créer une partie</button>
+            <button onClick={ props.joinRoom }>Rejoindre la partie</button>
+            <button onClick={ props.joinRoomSpec }>Observer la partie</button>
         </div>
     );
 }

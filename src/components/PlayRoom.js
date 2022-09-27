@@ -31,7 +31,7 @@ export default function PlayRoom(props) {
     if(!display) {
         return (
             <div class="PlayRoom">
-                <h1>En attente de la fiesta...</h1>
+                <h1>SUSPENSE...</h1>
             </div>
         );
     }

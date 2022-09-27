@@ -1,4 +1,4 @@
-const API_LOCATION = "https://on-pourlpouz.cyclic.app/api/";
+const API_LOCATION = "https://on-pourlpouz.herokuapp.com/api/";//"https://on-pourlpouz.cyclic.app/api/";
 
 async function getFromApi(url) {
     return await fetch(API_LOCATION + url);

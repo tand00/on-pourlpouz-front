@@ -5,7 +5,7 @@ export default function LoginScreen(props) {
     return (
         <div class="Login">
             <h1>On Pourlpouz</h1>
-            <h2>Le jeu où Alice est très forte</h2>
+            <h2>Le jeu où Alice est trop forte</h2>
             <input placeholder="Partie à rejoindre" onChange={ nameChanged }></input>
             <button onClick={ props.createRoom }>Créer une partie</button>
             <button onClick={ props.joinRoom }>Rejoindre la partie</button>

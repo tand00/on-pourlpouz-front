@@ -35,7 +35,7 @@ export default function ViewRoom(props) {
     else if(status.state === "revealing") {
         return (
             <Reveal
-                next={ props.room.nextState }
+                next={ nextState }
                 answers={ status.answers }
                 image={ status.question.image }
             ></Reveal>

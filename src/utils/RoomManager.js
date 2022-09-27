@@ -1,4 +1,4 @@
-const API_LOCATION = "http://localhost:9000/api/";
+const API_LOCATION = "https://on-pourlpouz.cyclic.app/api/";
 
 async function getFromApi(url) {
     return await fetch(API_LOCATION + url);

@@ -1,30 +1,26 @@
 import { useState } from "react";
 
+import "../styles/Reveal.css";
+
 export default function Reveal(props) {
-    let answers = props.answers;
-    let answer = "";
+    const [currentIndex, setCurrentIndex] = useState(0);
+    let answers = ["Tenez vous prêts..."].concat(props.answers).concat(["Rien de plus à voir..."]);
     let button = "";
-    async function nextAnswer() {
-        answer = answers.pop();
+    function nextAnswer() {
+        if(currentIndex < answers.length - 1) setCurrentIndex(idx => idx + 1);
     }
-    if( answers.length === 0 ) { 
-        answer = "Rien de plus à voir...";
+    if( currentIndex >= answers.length - 1 ) { 
         button = <button onClick={ props.next }>Continuer</button>;
-    }
-    else if( answer === "" ) {
-        answer = "Tenez vous prêts...";
-        button = <button onClick={ nextAnswer }>Voir les réponses</button>;
-    }
-    else {
+    } else {
         button = <button onClick={ nextAnswer }>Voir les réponses</button>;
     }
     return (
-        <div class="center">
+        <div class="Reveal">
             <img src={ props.image }></img>
-            <div key="1" class="card">
-                <p>{ answer }</p>
-                { button }
+            <div class="card">
+                <p>{ answers[currentIndex] }</p>
             </div>
+            { button }
         </div>
     );
 }

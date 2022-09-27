@@ -44,6 +44,15 @@ export default class RoomManager {
         if(!json.result) this.hasError = true;
     }
 
+    async sendAnswer(answer) {
+        let res = await postToApi("send-answer", { 
+            name: this.name ,
+            answer: answer
+        });
+        let json = await res.json();
+        if(!json.result) this.hasError = true;
+    }
+
     async getStatus() {
         let data = await getStatus(this.name);
         if(!data.result) return this.hasError = true;

@@ -3,6 +3,7 @@ import './App.css';
 import LoginScreen from './components/LoginScreen';
 import ViewRoom from './components/ViewRoom';
 import RoomManager from './utils/RoomManager';
+import PlayRoom from'./components/PlayRoom';
 
 let room = new RoomManager("");
 
@@ -18,14 +19,14 @@ function App() {
 	};
 	let joinRoom = function() {
 		setIsSpec(false);
-		setInRoom(false);
+		setInRoom(true);
 	}
 	let joinRoomSpec = () => setInRoom(true);
 	let leaveRoom = () => setInRoom(false);
 	let content = inRoom ? 
-		<ViewRoom
-			room={ room }
-		></ViewRoom>
+		isSpec ?
+			<ViewRoom room={ room }></ViewRoom> :
+			<PlayRoom room={ room }></PlayRoom>
 		:
 		<LoginScreen 
 			setRoomName={ setRoomName }

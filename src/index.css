@@ -22,3 +22,10 @@ body {
 	background: rgb(255,136,249);
 	background: linear-gradient(45deg, rgba(255,136,249,1), rgba(0,212,255,1));
 }
+
+.center {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

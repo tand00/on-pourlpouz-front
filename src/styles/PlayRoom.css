@@ -1,0 +1,26 @@
+.PlayRoom {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: stretch;
+    justify-content: center;
+}
+
+textarea {
+    margin: 10px;
+    font-size: 1.5rem;
+	padding: 15px;
+    font-family: 'Arvo', 'arial';
+    border-radius: 25px;
+    border: none;
+	text-align: center;
+    box-shadow: 0 5px rgb(116, 115, 115);
+    resize: none;
+    flex-grow: 1;
+}
+
+textarea:focus {
+	border: 5px solid #4abef3;
+	outline: none;
+	margin: 5px;
+}
